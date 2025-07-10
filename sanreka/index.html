@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SANREKA - Stock Bahan Bangunan Terpercaya</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"> <i class="fas fa-building me-2"></i>SANREKA </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Produk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Layanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+          </ul>
+          <div class="navbar-text ms-3"><i class="fas fa-phone me-1"></i> 085283818584</div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="hero-section">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/warehouse.jpg" class="d-block w-100" alt="Gudang Bahan Bangunan" />
+            <div class="carousel-caption">
+              <div class="container">
+                <h1 class="display-4 fw-bold mb-3">SANREKA</h1>
+                <p class="lead mb-4">Supplier Bahan Bangunan Terpercaya dengan Stock Lengkap</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/rebar.jpg" class="d-block w-100" alt="Besi Beton" />
+            <div class="carousel-caption">
+              <div class="container">
+                <h1 class="display-4 fw-bold mb-3">Besi Beton Berkualitas</h1>
+                <p class="lead mb-4">Tersedia berbagai ukuran dan grade sesuai standar SNI</p>
+                <a href="#products" class="btn btn-primary btn-lg">Lihat Produk</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/cement.jpg" class="d-block w-100" alt="Semen" />
+            <div class="carousel-caption">
+              <div class="container">
+                <h1 class="display-4 fw-bold mb-3">Semen Premium</h1>
+                <p class="lead mb-4">Stock semen dari brand terpercaya dengan harga kompetitif</p>
+                <a href="#products" class="btn btn-primary btn-lg">Lihat Produk</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/roofing.png" class="d-block w-100" alt="Material Atap" />
+            <div class="carousel-caption">
+              <div class="container">
+                <h1 class="display-4 fw-bold mb-3">Material Atap Lengkap</h1>
+                <p class="lead mb-4">Genteng, seng, dan aksesoris atap berkualitas tinggi</p>
+                <a href="#products" class="btn btn-primary btn-lg">Lihat Produk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-4">Tentang SANREKA</h2>
+            <p class="lead mb-4">SANREKA adalah perusahaan terpercaya yang bergerak di bidang penyediaan bahan bangunan dengan pengalaman lebih dari 15 tahun melayani kebutuhan konstruksi di Indonesia.</p>
+            <p class="mb-4">
+              Kami menyediakan berbagai macam bahan bangunan berkualitas tinggi dengan stock yang selalu tersedia dan harga yang kompetitif. Komitmen kami adalah memberikan pelayanan terbaik untuk mendukung kesuksesan proyek konstruksi
+              Anda.
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="feature-item mb-3">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>Kualitas Terjamin</span>
+                </div>
+                <div class="feature-item mb-3">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>Harga Kompetitif</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item mb-3">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>Pengiriman Cepat</span>
+                </div>
+                <div class="feature-item mb-3">
+                  <i class="fas fa-check-circle text-primary me-2"></i>
+                  <span>Pelayanan 24/7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="stats-container">
+              <div class="row text-center">
+                <div class="col-6">
+                  <div class="stat-item">
+                    <h3 class="stat-number">15+</h3>
+                    <p class="stat-label">Tahun Pengalaman</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-item">
+                    <h3 class="stat-number">1000+</h3>
+                    <p class="stat-label">Proyek Selesai</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-item">
+                    <h3 class="stat-number">500+</h3>
+                    <p class="stat-label">Klien Puas</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat-item">
+                    <h3 class="stat-number">24/7</h3>
+                    <p class="stat-label">Layanan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Produk Kami</h2>
+          <p class="lead">Berbagai macam bahan bangunan berkualitas tinggi</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-hammer"></i>
+              </div>
+              <h4>Besi & Baja</h4>
+              <p>Besi beton, besi siku, besi hollow, dan berbagai produk baja berkualitas SNI</p>
+              <ul class="product-features">
+                <li>Besi Beton Ulir & Polos</li>
+                <li>Besi Siku & Besi UNP</li>
+                <li>Besi Hollow & Pipa</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <h4>Semen & Agregat</h4>
+              <p>Semen dari brand terpercaya, pasir, kerikil, dan material agregat lainnya</p>
+              <ul class="product-features">
+                <li>Semen Portland</li>
+                <li>Pasir Beton & Pasir Pasang</li>
+                <li>Kerikil & Split</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <h4>Material Atap</h4>
+              <p>Genteng, seng, dan aksesoris atap untuk berbagai jenis bangunan</p>
+              <ul class="product-features">
+                <li>Genteng Beton & Keramik</li>
+                <li>Seng Gelombang & Spandek</li>
+                <li>Aksesoris Atap</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-square"></i>
+              </div>
+              <h4>Bata & Batako</h4>
+              <p>Bata merah, batako, dan material dinding berkualitas</p>
+              <ul class="product-features">
+                <li>Bata Merah Press</li>
+                <li>Batako & Hebel</li>
+                <li>Paving Block</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h4>Cat & Finishing</h4>
+              <p>Cat tembok, cat besi, dan material finishing berkualitas</p>
+              <ul class="product-features">
+                <li>Cat Tembok Interior & Eksterior</li>
+                <li>Cat Anti Karat</li>
+                <li>Plamir & Primer</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="product-card">
+              <div class="product-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h4>Alat & Aksesoris</h4>
+              <p>Alat konstruksi dan aksesoris pendukung pembangunan</p>
+              <ul class="product-features">
+                <li>Alat Tukang</li>
+                <li>Kawat & Paku</li>
+                <li>Aksesoris Konstruksi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Layanan Kami</h2>
+          <p class="lead">Pelayanan terbaik untuk kebutuhan konstruksi Anda</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card text-center">
+              <div class="service-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h5>Pengiriman</h5>
+              <p>Layanan pengiriman cepat dan aman ke seluruh wilayah</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card text-center">
+              <div class="service-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <h5>Estimasi RAB</h5>
+              <p>Bantuan perhitungan Rencana Anggaran Biaya proyek</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card text-center">
+              <div class="service-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h5>Konsultasi</h5>
+              <p>Konsultasi gratis pemilihan material yang tepat</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card text-center">
+              <div class="service-icon">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <h5>Stock Ready</h5>
+              <p>Jaminan ketersediaan stock untuk kebutuhan mendesak</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="lead">Siap melayani kebutuhan bahan bangunan Anda</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="contact-info text-center">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <h5>Alamat</h5>
+                  <p>Jl. Sukses no.1<br />Jogja 199402</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="contact-info text-center">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <h5>Telepon</h5>
+                  <p>085283818584</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="contact-info text-center">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <h5>Email</h5>
+                  <p>info@sanreka.com<br />sales@sanreka.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form mt-5">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="Nama Lengkap" required />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input type="email" class="form-control" placeholder="Email" required />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input type="tel" class="form-control" placeholder="Nomor Telepon" required />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="Subjek" required />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="text-white mb-3"><i class="fas fa-building me-2"></i>SANREKA</h5>
+            <p class="text-light">Supplier bahan bangunan terpercaya dengan pengalaman lebih dari 15 tahun. Komitmen kami adalah memberikan kualitas terbaik dengan harga yang kompetitif.</p>
+            <div class="social-links">
+              <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-light me-3"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="text-white mb-3">Menu</h6>
+            <ul class="list-unstyled">
+              <li><a href="#home" class="text-light">Beranda</a></li>
+              <li><a href="#about" class="text-light">Tentang Kami</a></li>
+              <li><a href="#products" class="text-light">Produk</a></li>
+              <li><a href="#services" class="text-light">Layanan</a></li>
+              <li><a href="#contact" class="text-light">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h6 class="text-white mb-3">Produk Utama</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-light">Besi & Baja</a></li>
+              <li><a href="#" class="text-light">Semen & Agregat</a></li>
+              <li><a href="#" class="text-light">Material Atap</a></li>
+              <li><a href="#" class="text-light">Bata & Batako</a></li>
+              <li><a href="#" class="text-light">Cat & Finishing</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h6 class="text-white mb-3">Jam Operasional</h6>
+            <ul class="list-unstyled text-light">
+              <li><strong>Senin - Jumat:</strong> 07:00 - 17:00</li>
+              <li><strong>Sabtu:</strong> 07:00 - 15:00</li>
+              <li><strong>Minggu:</strong> Tutup</li>
+              <li class="mt-2"><strong>Emergency:</strong> 24/7</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4 bg-light" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-light mb-0">&copy; 2024 SANREKA. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="text-light mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="https://www.instagram.com/dadangharian/" class="text-white fw-bold">Dadang Harianto</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Navbar background change on scroll
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Counter animation
+      function animateCounters() {
+        const counters = document.querySelectorAll(".stat-number");
+        counters.forEach((counter) => {
+          const target = parseInt(counter.textContent.replace(/\D/g, ""));
+          const increment = target / 100;
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = counter.textContent.replace(/\d+/, target);
+              clearInterval(timer);
+            } else {
+              counter.textContent = counter.textContent.replace(/\d+/, Math.floor(current));
+            }
+          }, 20);
+        });
+      }
+
+      // Trigger counter animation when in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      const statsContainer = document.querySelector(".stats-container");
+      if (statsContainer) {
+        observer.observe(statsContainer);
+      }
+    </script>
+  </body>
+</html>
