@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="QUEENS CATALOG - Katalog Elektronik Modern dengan Desain Cyberpunk Luxury" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>QUEENS CATALOG - Katalog Elektronik Modern</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff006e",
+              "primary-dark": "#ff1493",
+              "dark-bg": "#0a0a0a",
+              "dark-card": "#1a1a1a",
+              "dark-secondary": "#2a2a2a",
+              "text-primary": "#f5f5f5",
+              "text-secondary": "#a0a0a0",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #f5f5f5;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .glow-pink {
+        box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+      }
+
+      .glow-pink-hover:hover {
+        box-shadow: 0 0 30px rgba(255, 0, 110, 0.8);
+      }
+
+      .product-card {
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #2a2a2a;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff006e;
+      }
+
+      body.light-mode {
+        background-color: #f5f5f5;
+        color: #0a0a0a;
+      }
+
+      body.light-mode .bg-dark-bg {
+        background-color: #ffffff !important;
+      }
+
+      body.light-mode .bg-dark-card {
+        background-color: #f0f0f0 !important;
+      }
+
+      body.light-mode .bg-dark-secondary {
+        background-color: #e0e0e0 !important;
+      }
+
+      body.light-mode .text-text-primary {
+        color: #0a0a0a !important;
+      }
+
+      body.light-mode .text-text-secondary {
+        color: #666666 !important;
+      }
+
+      body.light-mode .border-dark-secondary {
+        border-color: #d0d0d0 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-dark-bg text-text-primary">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-dark-bg border-b border-dark-secondary shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+        <!-- Logo & Icons -->
+        <div class="flex items-center justify-between mb-4 sm:mb-6">
+          <div class="text-2xl sm:text-3xl font-bold font-poppins"><span class="text-primary">QUEENS</span><span class="text-text-primary"> CATALOG</span></div>
+          <div class="flex items-center gap-4">
+            <button class="text-primary hover:text-primary-dark text-xl sm:text-2xl transition-colors" title="Keranjang Belanja">🛒</button>
+            <button class="text-text-secondary hover:text-primary text-xl sm:text-2xl transition-colors" id="themeToggleBtn" title="Toggle Dark/Light Mode">🌙</button>
+            <button class="text-text-secondary hover:text-primary text-xl sm:text-2xl transition-colors" id="adminBtn" title="Admin Panel">⚙️</button>
+            <button class="md:hidden text-text-primary text-xl" id="mobileMenuBtn" title="Menu">☰</button>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+          <div class="flex-1 relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-lg">🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              class="w-full pl-10 pr-4 py-2 sm:py-2.5 bg-dark-card border border-dark-secondary text-text-primary placeholder-text-secondary rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm sm:text-base"
+              placeholder="Cari produk elektronik..."
+            />
+          </div>
+          <button class="md:hidden px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded font-semibold transition-colors text-sm" id="filterToggleBtn">🔽 Filter</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+        <!-- Sidebar -->
+        <aside class="hidden lg:block lg:col-span-1 bg-dark-card rounded-lg p-4 sm:p-6 border border-dark-secondary h-fit sticky top-24" id="sidebar">
+          <div class="flex items-center justify-between mb-6 lg:hidden">
+            <h3 class="text-lg font-bold font-poppins">Filter</h3>
+            <button class="text-text-primary text-2xl" id="sidebarClose">✕</button>
+          </div>
+
+          <!-- Category Filter -->
+          <div class="mb-8">
+            <h4 class="text-xs sm:text-sm font-semibold font-poppins text-primary mb-4 uppercase tracking-wider">Kategori</h4>
+            <div class="space-y-2" id="categoryFilters"></div>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div class="mb-8">
+            <h4 class="text-xs sm:text-sm font-semibold font-poppins text-primary mb-4 uppercase tracking-wider">Harga</h4>
+            <div class="space-y-3">
+              <div>
+                <label id="minPriceLabel" class="text-xs text-text-secondary">Min: Rp 0</label>
+                <input type="range" id="minPrice" class="w-full accent-primary cursor-pointer" min="0" max="40000000" step="1000000" value="0" />
+              </div>
+              <div>
+                <label id="maxPriceLabel" class="text-xs text-text-secondary">Max: Rp 40.000.000</label>
+                <input type="range" id="maxPrice" class="w-full accent-primary cursor-pointer" min="0" max="40000000" step="1000000" value="40000000" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Rating Filter -->
+          <div class="mb-8">
+            <h4 class="text-xs sm:text-sm font-semibold font-poppins text-primary mb-4 uppercase tracking-wider">Rating</h4>
+            <div class="space-y-2" id="ratingFilters"></div>
+          </div>
+
+          <!-- Reset Button -->
+          <button class="w-full px-4 py-2 bg-dark-secondary hover:bg-primary text-text-primary hover:text-white rounded font-semibold transition-colors text-sm" id="resetBtn">Reset Filter</button>
+        </aside>
+
+        <!-- Mobile Sidebar Overlay -->
+        <div class="fixed inset-0 bg-black/80 z-30 hidden" id="sidebarOverlay"></div>
+
+        <!-- Mobile Sidebar -->
+        <aside class="fixed left-0 top-0 h-screen w-64 bg-dark-card border-r border-dark-secondary z-40 overflow-y-auto transform -translate-x-full transition-transform duration-300 lg:hidden" id="mobileSidebar">
+          <div class="p-4 sm:p-6">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-lg font-bold font-poppins">Filter</h3>
+              <button class="text-text-primary text-2xl" id="sidebarClose">✕</button>
+            </div>
+
+            <!-- Category Filter Mobile -->
+            <div class="mb-8">
+              <h4 class="text-xs sm:text-sm font-semibold font-poppins text-primary mb-4 uppercase tracking-wider">Kategori</h4>
+              <div class="space-y-2" id="categoryFiltersMobile"></div>
+            </div>
+
+            <!-- Price Range Filter Mobile -->
+            <div class="mb-8">
+              <h4 class="text-xs sm:text-sm font-semibold font-poppins text-primary mb-4 uppercase tracking-wider">Harga</h4>
+              <div class="space-y-3">
+                <div>
+                  <label id="minPriceLabelMobile" class="text-xs text-text-secondary">Min: Rp 0</label>
+                  <input type="range" id="minPriceMobile" class="w-full accent-primary cursor-pointer" min="0" max="40000000" step="1000000" value="0" />
+                </div>
+                <div>
+                  <label id="maxPriceLabelMobile" class="text-xs text-text-secondary">Max: Rp 40.000.000</label>
+                  <input type="range" id="maxPriceMobile" class="w-full accent-primary cursor-pointer" min="0" max="40000000" step="1000000" value="40000000" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Rating Filter Mobile -->
+            <div class="mb-8">
+              <h4 class="text-xs sm:text-sm font-semibold font-poppins text-primary mb-4 uppercase tracking-wider">Rating</h4>
+              <div class="space-y-2" id="ratingFiltersMobile"></div>
+            </div>
+
+            <!-- Reset Button Mobile -->
+            <button class="w-full px-4 py-2 bg-dark-secondary hover:bg-primary text-text-primary hover:text-white rounded font-semibold transition-colors text-sm" id="resetBtnMobile">Reset Filter</button>
+          </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="lg:col-span-3">
+          <!-- Content Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold font-poppins mb-1" id="contentTitle">Semua Produk</h2>
+              <p class="text-text-secondary text-sm sm:text-base" id="productCount">12 produk ditemukan</p>
+            </div>
+            <select id="sortSelect" class="px-3 sm:px-4 py-2 bg-dark-card border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-sm sm:text-base">
+              <option value="newest">Terbaru</option>
+              <option value="price-low">Harga Terendah</option>
+              <option value="price-high">Harga Tertinggi</option>
+              <option value="rating">Rating Tertinggi</option>
+            </select>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6" id="productsGrid"></div>
+
+          <!-- WhatsApp Button (Fixed) -->
+          <div class="fixed bottom-6 right-6 z-30">
+            <button
+              id="whatsappBtn"
+              class="w-14 h-14 sm:w-16 sm:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-2xl sm:text-3xl transition-all duration-300 transform hover:scale-110"
+              title="Chat WhatsApp"
+            >
+              💬
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="modal">
+      <div class="bg-dark-card rounded-lg border border-primary max-w-2xl w-full max-h-[90vh] overflow-y-auto glow-pink" id="modalContent"></div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" id="adminModal">
+      <div class="bg-dark-card rounded-lg border border-primary max-w-4xl w-full max-h-[90vh] overflow-y-auto glow-pink">
+        <div class="sticky top-0 bg-dark-bg border-b border-dark-secondary p-4 sm:p-6 flex items-center justify-between">
+          <h2 class="text-xl sm:text-2xl font-bold font-poppins text-text-primary">Admin Panel - Kelola Produk</h2>
+          <button class="text-text-secondary hover:text-primary text-2xl transition-colors" onclick="closeAdminModal()">✕</button>
+        </div>
+        <div class="p-4 sm:p-6 space-y-6">
+          <!-- Add Product Form -->
+          <div class="border border-dark-secondary rounded-lg p-4 sm:p-6">
+            <h3 class="text-lg font-bold font-poppins text-primary mb-4">Tambah Produk Baru</h3>
+            <form id="addProductForm" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" id="productName" placeholder="Nama Produk" class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm" required />
+                <select id="productCategory" class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm" required>
+                  <option value="">Pilih Kategori</option>
+                  <option value="smartphones">Smartphone</option>
+                  <option value="laptops">Laptop</option>
+                  <option value="accessories">Aksesori</option>
+                  <option value="wearables">Wearable</option>
+                </select>
+                <input type="number" id="productPrice" placeholder="Harga Jual" class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm" required />
+                <input type="number" id="productOriginalPrice" placeholder="Harga Asli" class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm" />
+                <input
+                  type="number"
+                  id="productRating"
+                  placeholder="Rating (0-5)"
+                  min="0"
+                  max="5"
+                  step="0.1"
+                  class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm"
+                  value="4.5"
+                />
+                <input type="number" id="productReviews" placeholder="Jumlah Review" class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm" value="0" />
+              </div>
+              <textarea
+                id="productDescription"
+                placeholder="Deskripsi Produk"
+                class="w-full px-3 py-2 bg-dark-bg border border-dark-secondary text-text-primary rounded focus:outline-none focus:border-primary text-sm h-20 resize-none"
+                required
+              ></textarea>
+              <div class="flex gap-2">
+                <input type="checkbox" id="productInStock" checked class="w-4 h-4 accent-primary cursor-pointer" />
+                <label for="productInStock" class="text-text-secondary text-sm cursor-pointer">Stok Tersedia</label>
+              </div>
+              <button type="submit" class="w-full px-4 py-2 bg-primary hover:bg-primary-dark text-white font-bold rounded transition-colors text-sm">Tambah Produk</button>
+            </form>
+          </div>
+
+          <!-- Products List -->
+          <div class="border border-dark-secondary rounded-lg p-4 sm:p-6">
+            <h3 class="text-lg font-bold font-poppins text-primary mb-4">Daftar Produk</h3>
+            <div class="space-y-2 max-h-96 overflow-y-auto" id="adminProductsList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
