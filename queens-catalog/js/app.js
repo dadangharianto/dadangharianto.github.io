@@ -122,23 +122,24 @@ const products = [
   },
   {
     id: "6",
-    name: "Apple AirPods Pro 2",
-    category: "accessories",
-    price: 2999000,
-    originalPrice: 3699000,
-    image: "images/GODA-118Y-putih.jpg",
-    images: ["images/GODA-118Y-putih.jpg", "images/category-wearables.jpg", "images/GODA-118Y-hitam.jpg"],
-    description: "Earbuds premium dengan ANC dan audio spatial yang memukau",
-    rating: 4.7,
-    reviews: 789,
+    name: "Advan Tab A10 WIFI Only",
+    category: "smartphones",
+    price: 1599000,
+    originalPrice: 1800000,
+    image: "images/advanTabA10.jpg",
+    images: ["images/advanTabA10.jpg", "images/advanTabA101.jpg", "images/advanTabA102.jpg", "images/advanTabA103.jpg"],
+    description:
+      "ADVAN TAB A10 WIFI adalah tablet terbaru dari Advan yang memiliki design elegant, stylish dan modern, serta memiliki kinerja yang  baik untuk mendukung produktifitas pengguna seperti bermain game, bekerja, belajar, daring (Zoom, Google meet, dll) .",
+    rating: 4.9,
+    reviews: 6500,
     inStock: true,
     specs: {
-      Tipe: "In-ear Wireless",
-      "Noise Cancellation": "Adaptive Audio",
-      Baterai: "6 jam (30 jam dengan case)",
-      Konektivitas: "Bluetooth 5.3",
-      Fitur: "Spatial Audio, Conversation Awareness",
-      "Tahan Air": "IP54",
+      Layar: "10.1 Inch HD IPS 1280*800",
+      Prosesor: "A523 Octa-core ,ARM CortexTM-A55 1.8GHz",
+      Penyimpanan: "64GB",
+      Kamera: "Utama 5MP + Depan 2MP",
+      Baterai: "000mAh, 5V 2A charging",
+      "Masa Garansi": "12 Bulan",
     },
   },
   {
@@ -557,7 +558,7 @@ function renderProducts() {
               👁️ Lihat Detail
             </button>
             <button class="flex items-center gap-1 bg-green-500 hover:bg-green-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded font-semibold transition-all text-xs sm:text-sm" onclick="askStockViaWhatsApp('${product.id}', event)">
-              💬 Tanya
+              <img src="images/whatsapp.jpg" width="20" /> Tanya
             </button>
           </div>
         </div>
