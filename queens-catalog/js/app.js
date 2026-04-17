@@ -124,7 +124,7 @@ const products = [
     id: "6",
     name: "Advan Tab A10 WIFI Only",
     category: "smartphones",
-    price: 1599000,
+    price: 1450000,
     originalPrice: 1800000,
     image: "images/advanTabA10.jpg",
     images: ["images/advanTabA10.jpg", "images/advanTabA101.jpg", "images/advanTabA102.jpg", "images/advanTabA103.jpg"],
